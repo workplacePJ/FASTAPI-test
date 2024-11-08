@@ -1,13 +1,12 @@
 from pydantic import BaseModel, Field
-from typing import Optional
 
 class Company(BaseModel):
     id: int
     name: str
     postal_code: str
     address: str
-    building_name: Optional[str]
-    room_number: Optional[str]
+    building_name: str | None = None
+    room_number: str | None = None
     tel: str
     fax: str
     #mail: str
