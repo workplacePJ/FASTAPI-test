@@ -9,7 +9,7 @@ class Company(BaseModel):
     room_number: str | None = None
     tel: str
     fax: str
-    #mail: str
-    #HP: str
-    invoice_registration_number: str
-    #company_seal: str
+    #mail: str = Field(..., pattern = r'^$')
+    #HP: str = Field(..., pattern = r'^$')
+    #invoice_registration_number: str = Field(..., pattern = r'^$')
+    #company_seal: str = Field(..., pattern = r'^$')
