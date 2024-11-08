@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 import api.schemas.company as company_schema
+from typing import List
 
 router = APIRouter()
 
