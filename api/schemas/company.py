@@ -1,5 +1,8 @@
 from pydantic import BaseModel, Field
 
+class CompanyBase(BaseModel):
+
+    
 class Company(BaseModel):
     id: int
     name: str
