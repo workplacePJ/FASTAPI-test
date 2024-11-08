@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+import api.schemas.company as task_schema
 
 router = APIRouter()
 
