@@ -1,10 +1,6 @@
 from pydantic import BaseModel, Field
 
 class CompanyBase(BaseModel):
-
-    
-class Company(BaseModel):
-    id: int
     name: str
     postal_code: str = Field(..., pattern = r'^[0-9]{7}$')
     address: str
@@ -16,3 +12,18 @@ class Company(BaseModel):
     #HP: str = Field(..., pattern = r'^$')
     #invoice_registration_number: str = Field(..., pattern = r'^$')
     #company_seal: str = Field(..., pattern = r'^$')
+    
+class Company(CompanyBase):
+    id: int
+    
+    class Config:
+        orm_mode = True
+
+class CompanyAdd(CompanyBase):
+    pass
+
+class CompanyAddResponse(CompanyAdd):
+    id: int
+
+    class Config:
+        orm_mode = True
