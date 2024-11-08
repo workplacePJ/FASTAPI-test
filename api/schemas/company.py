@@ -6,6 +6,6 @@ class Company(BaseModel):
     postal_code: str
     address: str
     building_name: str | None = Field(None, description = '建物名')
-    floor: str | None = Field(None, description = '所在階')
+    floor_or_room_number: str | None = Field(None, description = '所在階又は号室')
     tel: str
     fax: str
