@@ -6,6 +6,6 @@ class Company(BaseModel):
     postal_code: str
     address: str
     building_name: str | None = None
-    room_number: str | None
+    room_number: str | None = None
     tel: str
     fax: str
